@@ -1,0 +1,228 @@
+/* Main container for the navbar */
+.nav__section {
+    height: 14vh;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+/* Container for header items */
+.header_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Container for the first logo */
+.Logo01__Container {
+    width: 25%;
+    height: 4.5rem;
+}
+
+/* Container for the second logo */
+.Logo02__Container {
+    width: 20%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: end;
+}
+
+/* Common styles for both logos */
+.logo_01,
+.logo_02 {
+    height: 100%;
+    width: 60%;
+}
+
+/* Container for the header body */
+.HeaderBody__container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Navigation menu styles */
+.nav__menu.lato-bold {
+    padding: 5px;
+    color: var(--color-slate-950);
+}
+
+/* Navigation link styles */
+.nav__link {
+    text-decoration: none;
+    color: var(--color-slate-950);
+}
+
+/* Flexbox layout for navigation menu */
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Add flex-wrap for better handling of narrow widths */
+}
+
+/* Hover effect for navigation links */
+.nav__link.lato-bold:hover {
+    border-bottom: 3px solid var(--color-Amber-400);
+}
+
+/* Search bar default styles */
+.searchbar_default {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-slate-400);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.searchbar_default input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.searchbar_default button {
+    background-color: var(--color-Amber-400);
+    border: none;
+    outline: none;
+    padding: 4px 16px;
+    cursor: pointer;
+}
+
+/* Hide mobile search bar by default */
+.searchbar_mobile {
+    display: none;
+}
+
+/* Hide mobile menu icon by default */
+#mobile {
+    display: none;
+}
+
+/* Hide mobile search bar by default */
+#mobile_searchbar {
+    display: none;
+}
+
+/* Responsive styles for devices with max-width 912px */
+@media screen and (max-width: 964px) {
+    /* Adjust navbar height and margin */
+    .nav__section {
+        height: auto;
+        margin-bottom: 0.8rem;
+        padding-top: 0;
+    }
+
+    /* Hide default navigation menu */
+    .nav__menu {
+        display: none;
+    }
+
+    /* Show mobile menu icon */
+    #mobile {
+        display: block;
+        z-index: 10;
+    }
+
+    /* Styles for mobile menu */
+    .mobile__menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+        text-align: start;
+        padding: 2rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        margin-top: 1rem;
+        min-height: 250px;
+        background-color: var(--color-slate-950);
+        color: var(--color-zinc-50);
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    /* Adjust first logo width */
+    .logo_01 {
+        width: 100%;
+    }
+
+    /* Hide second logo */
+    .Logo02__Container {
+        display: none;
+    }
+
+    /* Adjust first logo container width */
+    .Logo01__Container {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Order adjustment for the first logo container */
+    .Logo01__Container {
+        order: 1;
+    }
+
+    /* Adjust mobile menu link styles */
+    .nav__link {
+        text-decoration: none;
+        color: var(--color-zinc-50);
+    }
+
+    /* Show mobile search bar */
+    #mobile_searchbar {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Hide desktop search bar */
+    #desktop_searchbar {
+        display: none;
+    }
+
+    /* Adjust search bar styles */
+    .searchbar_default {
+        width: 100%;
+    }
+
+    .searchbar_default input {
+        width: 80%;
+    }
+
+    .searchbar_default button {
+        width: 20%;
+    }
+}
+
+/* Responsive styles for devices with max-width 480px */
+@media screen and (max-width: 480px) {
+    /* Further adjustments for small screens */
+    .Logo01__Container {
+        width: 200px;
+    }
+
+    .mobile__menu {
+        padding: 1.5rem;
+        gap: 20px;
+    }
+
+    .searchbar_default input {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .searchbar_default button {
+        padding: 4px 12px;
+    }
+}

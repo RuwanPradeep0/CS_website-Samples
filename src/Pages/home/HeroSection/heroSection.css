@@ -1,0 +1,16 @@
+.heroSection_mainContainer{
+    height: 70vh;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 3rem;
+}
+
+@media screen and (max-width:768px){
+    .heroSection_mainContainer{
+        line-height: 2rem;
+    }
+    
+}
