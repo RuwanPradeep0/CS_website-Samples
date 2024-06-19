@@ -1,6 +1,6 @@
 .footer{
     background-color: var(--color-blue-700);
-    height: 33vh;
+   
 }
 
 .footer__mainsection{
@@ -20,11 +20,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
 }
 
 .footerlogo{
     height: 5rem;
-    width: 60%;
+    width: 50%;
    
 }
 
@@ -88,29 +89,37 @@
     }
 
     .footer__mainsection{
-        display: flex;
-        flex-direction: column;
-        
+        flex-wrap: wrap;
+        height: auto;
+     
     }
 
     .footer__container-01,
-    .footer__container-02,
+    .footer__container-02{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+
     .footer__container-03{
         width: 100%;
-        height: 22vh;
+        height: 25vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
     
-    .footer__container-01{
+    /* .footer__container-01{
         gap: 15px;
-    }
+    } */
 
     .footer__container-01__logo img{
 
-        height: 6rem;
-        width: 60%;
+        height: 5rem;
+        width: 75%;
        
     }
     .mapcontainer{
